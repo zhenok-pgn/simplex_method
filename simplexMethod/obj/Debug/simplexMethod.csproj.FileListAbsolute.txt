@@ -1,0 +1,7 @@
+D:\study programming\visual\simplexMethod\simplexMethod\bin\Debug\simplexMethod.exe.config
+D:\study programming\visual\simplexMethod\simplexMethod\bin\Debug\simplexMethod.exe
+D:\study programming\visual\simplexMethod\simplexMethod\bin\Debug\simplexMethod.pdb
+D:\study programming\visual\simplexMethod\simplexMethod\obj\Debug\simplexMethod.csproj.AssemblyReference.cache
+D:\study programming\visual\simplexMethod\simplexMethod\obj\Debug\simplexMethod.csproj.CoreCompileInputs.cache
+D:\study programming\visual\simplexMethod\simplexMethod\obj\Debug\simplexMethod.exe
+D:\study programming\visual\simplexMethod\simplexMethod\obj\Debug\simplexMethod.pdb
