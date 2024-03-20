@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "D:\\study programming\\visual\\simplexMethod\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|d:\\study programming\\visual\\simplexmethod\\simplexmethod\\simplexsolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\simplexsolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|d:\\study programming\\visual\\simplexmethod\\simplexmethod\\targetfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\targetfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|d:\\study programming\\visual\\simplexmethod\\simplexmethod\\comparisonsigns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\comparisonsigns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|d:\\study programming\\visual\\simplexmethod\\simplexmethod\\restriction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\restriction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|d:\\study programming\\visual\\simplexmethod\\simplexmethod\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,17 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ComparisonSigns.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\ComparisonSigns.cs",
+              "RelativeDocumentMoniker": "simplexMethod\\ComparisonSigns.cs",
+              "ToolTip": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\ComparisonSigns.cs",
+              "RelativeToolTip": "simplexMethod\\ComparisonSigns.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T06:01:24.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Restriction.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Restriction.cs",
+              "RelativeDocumentMoniker": "simplexMethod\\Restriction.cs",
+              "ToolTip": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Restriction.cs",
+              "RelativeToolTip": "simplexMethod\\Restriction.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T05:58:37.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TargetFunction.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\TargetFunction.cs",
+              "RelativeDocumentMoniker": "simplexMethod\\TargetFunction.cs",
+              "ToolTip": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\TargetFunction.cs",
+              "RelativeToolTip": "simplexMethod\\TargetFunction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T05:54:42.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SimplexSolver.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\SimplexSolver.cs",
+              "RelativeDocumentMoniker": "simplexMethod\\SimplexSolver.cs",
+              "ToolTip": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\SimplexSolver.cs",
+              "RelativeToolTip": "simplexMethod\\SimplexSolver.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBAAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T05:45:56.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Program.cs",
               "RelativeDocumentMoniker": "simplexMethod\\Program.cs",
               "ToolTip": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Program.cs",
               "RelativeToolTip": "simplexMethod\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGgAAAATAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAgwEgAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-10T13:09:58.957Z",
               "EditorCaption": ""
