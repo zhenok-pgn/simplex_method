@@ -8,33 +8,45 @@ namespace simplexMethod
 {
     internal class Restriction
     {
-        public readonly double[] Coefficients;
-        public readonly ComparisonSigns Sign;
-        public readonly double FreeCoefficient;
-        public double[] BalanceCoefficients { get {return balanceCoefficients; } }
-        private double[] balanceCoefficients;
-        public Restriction(double[] coefficients, double freeCoefficient,  ComparisonSigns sign) 
+        public readonly double[,] Coefficients;
+        public readonly ComparisonSigns[] Signs;
+        public readonly double[] FreeCoefficients;
+        public double[,] BalanceCoefficients { get {return balanceCoefficients; } }
+        private double[,] balanceCoefficients;
+        public Restriction(double[,] coefficients, double[] freeCoefficients,  ComparisonSigns[] signs) 
         { 
             Coefficients = coefficients;
-            Sign = sign;
-            FreeCoefficient = freeCoefficient;
-            GetBalanceCoefficients();
+            Signs = signs;
+            FreeCoefficients = freeCoefficients;
+            SetBalanceCoefficients();
         }
 
-        private void GetBalanceCoefficients()
+        private void SetBalanceCoefficients()
         {
-            switch (Sign)
-            {
-                case ComparisonSigns.Equal:
-                    balanceCoefficients = new double[] { 1.0 };
-                    break;
-                case ComparisonSigns.GreaterOrEqual:
-                    balanceCoefficients = new double[] { -1.0, 1.0 };
-                    break;
-                case ComparisonSigns.LessOrEqual:
-                    balanceCoefficients = new double[] { 1.0 };
-                    break;
-            }
+            int equalsCount = 0;
+            foreach (var sign in Signs)
+                if(sign == ComparisonSigns.GreaterOrEqual)
+                    equalsCount++;
+
+            balanceCoefficients = new double[FreeCoefficients.Length + equalsCount, FreeCoefficients.Length];
+            int currentPosition = 0;
+            for (int i = 0; i < Signs.Length; i++)
+                switch (Signs[i])
+                {
+                    case ComparisonSigns.Equal:
+                        balanceCoefficients[i,currentPosition] = 1.0;
+                        currentPosition++;
+                        break;
+                    case ComparisonSigns.GreaterOrEqual:
+                        balanceCoefficients[i, currentPosition] = -1.0;
+                        balanceCoefficients[i, currentPosition + 1] = 1.0;
+                        currentPosition += 2;
+                        break;
+                    case ComparisonSigns.LessOrEqual:
+                        balanceCoefficients[i, currentPosition] = 1.0;
+                        currentPosition++;
+                        break;
+                }
         }
     }
 }
