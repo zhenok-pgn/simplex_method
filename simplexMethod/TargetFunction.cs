@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace simplexMethod
 {
-    internal class TargetFunction
+    public class TargetFunction
     {
         public bool IsMaximize { get; set; }
         public double[] Coefficients { get; set; }

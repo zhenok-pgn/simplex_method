@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace simplexMethod
 {
-    internal class Basis
+    public class Basis
     {
         public int[] Keys { get;}
         public double[] Values { get;}

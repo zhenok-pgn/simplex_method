@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleTables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -81,140 +82,56 @@ namespace simplexMethod
 
             var targetFunc = new TargetFunction(new double[] { -1.0, 2.0 }, false);
             var restrictions = new Restriction(
-                new double[,] { 
+                new double[,] {
                     {2.0, -3.0 },
                     {1.0, -1.0 },
                     {2.0, -1.0 }
-                }, 
-                new double[] {0.0, 3.0, 4.0}, 
-                new ComparisonSigns[] { 
-                    ComparisonSigns.GreaterOrEqual, 
-                    ComparisonSigns.LessOrEqual, 
+                },
+                new double[] { 0.0, 3.0, 4.0 },
+                new ComparisonSigns[] {
+                    ComparisonSigns.GreaterOrEqual,
+                    ComparisonSigns.LessOrEqual,
                     ComparisonSigns.Equal}
                 );
 
-            var simplexSolver = new SimplexSolver( targetFunc, restrictions );
+            var simplexSolver = new SimplexSolver(targetFunc, restrictions);
+            simplexSolver.OnPrintIteration += PrintIterationHandler;
+            simplexSolver.StartSolving();
+        }
 
-            /*double[,] table = new double[restrictParams.Count, funcParams.Count + 2 + restrictParams.Count];
-            for(int i = 0; i < table.GetLength(0); i++)
+        private static void PrintIterationHandler(object sender, PrintIterationEventArgs e)
+        {
+            var firstLine = new List<string>() { "basis", "cb", "c/b" };
+            for(int i = 0; i < e.TargetFunction.Coefficients.Length; i++)
             {
-                for(int j = 0; j < table.GetLength(1); j++)
-                {
-                    if (j == 0)
-                        table[i, j] = 0;
-                    else if (j == 1)
-                        table[i, j] = restrictParams[i][restrictParams[i].Length - 1];
-                    else if (j > 1 && j < 2 + funcParams.Count)
-                        table[i, j] = restrictParams[i][j - 2];
-                    else
-                    {
-                        var newJ = j - (2 + funcParams.Count);
-                        table[i, j] = i == newJ ? 1 : 0;
-                    }
-                }
+                firstLine.Add($"{e.TargetFunction.Coefficients[i]}/A{i + 1}");
             }
 
-            var coefficients = GetFuncCoefficeints(funcParams, restrictParams);
-            while (true)
+            var table = new ConsoleTable(firstLine.ToArray());
+            for(int i = 0; i < e.VectorB.Length; i++)
             {
-                var z = GetScalarProduct(table, 0, 1);
-                var simplexDiffrences = GetSimplexDiffrences(table, coefficients);
-                if(IsBreak(simplexDiffrences)) 
-                { 
-                    break; 
+                var curLine = new List<string>
+                {
+                    $"x{e.VectorBasis.Keys[i]}",
+                    $"{e.VectorBasis.Values[i]}",
+                    $"{e.VectorB[i]}"
+                };
+                for(int j = 0; j < e.A.GetLength(1); j++)
+                {
+                    curLine.Add(e.A[i, j].ToString());
                 }
-
-                var guideColIndex = GetGuideColIndex(simplexDiffrences);
-                var guideRowIndex = GetGuideRowIndex(table, guideColIndex);
-                
-                table = GetNewSimplexTable(table, coefficients, guideRowIndex, guideColIndex);
-            }*/
-        }
-
-        /*static double GetScalarProduct(double[,] table, int j1, int j2)
-        {
-            double result = 0;
-            for(int i = 0; i < table.GetLength(0); i++)
-                result += table[i, j1] * table[i, j2];
-            return result;
-        }
-
-        static bool IsBreak(double[] simplexDiffrences)
-        {
-            return false;
-        }
-
-        static double[] GetFuncCoefficeints(List<double> funcParams, List<double[]> restrictParams)
-        {
-            var result = new double[funcParams.Count + restrictParams.Count];
-            for(int i = 0; i < funcParams.Count; i++)
-                result[i] = funcParams[i];
-            return result;
-        }
-
-        static double[] GetSimplexDiffrences(double[,] table, double[] coefficients)
-        {
-            var result = new double[coefficients.Length];
-            for(int i = 0;i < coefficients.Length;i++)
-            {
-                result[i] = GetScalarProduct(table, 0, i) - coefficients[i];
+                table.AddRow(curLine.ToArray());
             }
-            return result;
-        }
 
-        static int GetGuideColIndex(double[] simplexDiffrences)
-        {
-            var min = simplexDiffrences[0];
-            var index = 0;
-            for(int i = 0; i < simplexDiffrences.Length; i++)
-                if (simplexDiffrences[i] < min)
-                {
-                    min = simplexDiffrences[i];
-                    index = i;
-                }
-            return index;
-        }
-
-        static int GetGuideRowIndex(double[,] table, int colIndex)
-        {
-            var min = double.MaxValue;
-            var index = 0;
-            for (int i = 0; i < table.GetLength(0); i++)
+            var lastLine = new List<string>() { " ", "z=", (sender as SimplexSolver).FunctionValue.ToString() };
+            for (int i = 0; i < e.SimplexDiffrences.Length; i++)
             {
-                if (table[i, colIndex + 2] < 0)
-                    continue;
-                var div = table[i, 1] / table[i, colIndex + 2];
-                if (div < min)
-                {
-                    min = div;
-                    index = i;
-                }
-            }       
-            return index;
-        }
-
-        static double[,] GetNewSimplexTable(double[,] table, double[] coefficients, int guideRowIndex, int guideColIndex)
-        {
-            double[,] newTable = new double[table.GetLength(0), table.GetLength(1)];
-            for (int i = 0; i < newTable.GetLength(0); i++)
-            {
-                for (int j = 0; j < newTable.GetLength(1); j++)
-                {
-                    if (j == 0)
-                        newTable[i, j] = i == guideRowIndex ? coefficients[guideColIndex] : table[i, j];
-                    else if (j == 1)
-                        newTable[i, j] = i == guideRowIndex ?
-                            table[i, j] / table[guideRowIndex, guideColIndex + 2] :
-                            table[i, j] - table[guideRowIndex, j] * table[i, guideColIndex + 2] / table[guideRowIndex, guideColIndex + 2];
-                    else if (j == guideColIndex + 2)
-                        newTable[i, j] = i == guideRowIndex ? 1 : 0;
-                    else
-                        newTable[i, j] = i == guideRowIndex ?
-                            table[i, j] / table[guideRowIndex, guideColIndex + 2] :
-                            table[i, j] - table[guideRowIndex, j] * table[i, guideColIndex + 2] / table[guideRowIndex, guideColIndex + 2];
-                }
+                lastLine.Add($"{e.SimplexDiffrences[i]}");
             }
-            return newTable;
-        }*/
+            table.AddRow(lastLine.ToArray());
+
+            table.Write();
+            Console.WriteLine();
+        }
     }
 }

@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="ComparisonSigns.cs" />
     <Compile Include="Basis.cs" />
+    <Compile Include="ConsoleTables.cs" />
+    <Compile Include="ExitStatus.cs" />
     <Compile Include="MatrixExtention.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
