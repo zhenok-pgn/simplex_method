@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "D:\\study programming\\visual\\simplexMethod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|d:\\study programming\\visual\\simplexmethod\\simplexmethod\\vectormath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\vectormath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|d:\\study programming\\visual\\simplexmethod\\simplexmethod\\simplexsolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|D:\\study programming\\visual\\simplexMethod\\simplexmethod\\simplexsolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\simplexsolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|d:\\study programming\\visual\\simplexmethod\\simplexmethod\\crutch .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\crutch .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|D:\\study programming\\visual\\simplexMethod\\simplexmethod\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|D:\\study programming\\visual\\simplexMethod\\simplexmethod\\restriction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\restriction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|D:\\study programming\\visual\\simplexMethod\\simplexmethod\\targetfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\targetfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|d:\\study programming\\visual\\simplexmethod\\simplexmethod\\vectormath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\vectormath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|d:\\study programming\\visual\\simplexmethod\\simplexmethod\\basis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\basis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|D:\\study programming\\visual\\simplexMethod\\simplexmethod\\restriction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|solutionrelative:simplexmethod\\restriction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77246008-8A03-46EF-94EE-69BBC3B1D7A2}|simplexMethod\\simplexMethod.csproj|D:\\study programming\\visual\\simplexMethod\\simplexmethod\\comparisonsigns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,24 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Crutch .cs",
-              "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Crutch .cs",
-              "RelativeDocumentMoniker": "simplexMethod\\Crutch .cs",
-              "ToolTip": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Crutch .cs",
-              "RelativeToolTip": "simplexMethod\\Crutch .cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAaAAAA",
+              "DocumentIndex": 4,
+              "Title": "Basis.cs",
+              "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Basis.cs",
+              "RelativeDocumentMoniker": "simplexMethod\\Basis.cs",
+              "ToolTip": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Basis.cs",
+              "RelativeToolTip": "simplexMethod\\Basis.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T18:50:07.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "VectorMath.cs",
               "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\VectorMath.cs",
               "RelativeDocumentMoniker": "simplexMethod\\VectorMath.cs",
@@ -80,52 +80,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Restriction.cs",
               "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Restriction.cs",
               "RelativeDocumentMoniker": "simplexMethod\\Restriction.cs",
               "ToolTip": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Restriction.cs",
               "RelativeToolTip": "simplexMethod\\Restriction.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T05:58:37.065Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "TargetFunction.cs",
               "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\TargetFunction.cs",
               "RelativeDocumentMoniker": "simplexMethod\\TargetFunction.cs",
               "ToolTip": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\TargetFunction.cs",
               "RelativeToolTip": "simplexMethod\\TargetFunction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T05:54:42.066Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SimplexSolver.cs",
               "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\SimplexSolver.cs",
               "RelativeDocumentMoniker": "simplexMethod\\SimplexSolver.cs",
               "ToolTip": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\SimplexSolver.cs",
               "RelativeToolTip": "simplexMethod\\SimplexSolver.cs",
-              "ViewState": "AQIAAHcAAAAAAAAAAAAAwIcAAABCAAAA",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAAwJYAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T05:45:56.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Program.cs",
               "RelativeDocumentMoniker": "simplexMethod\\Program.cs",
               "ToolTip": "D:\\study programming\\visual\\simplexMethod\\simplexMethod\\Program.cs",
               "RelativeToolTip": "simplexMethod\\Program.cs",
-              "ViewState": "AQIAAKQAAAAAAAAAAAAuwJQAAAAIAAAA",
+              "ViewState": "AQIAAJQAAAAAAAAAAAAgwFYAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-10T13:09:58.957Z",
               "EditorCaption": ""

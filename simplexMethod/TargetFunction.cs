@@ -11,7 +11,7 @@ namespace simplexMethod
         public bool IsMaximize { get; set; }
         public double[] Coefficients { get; set; }
 
-        public TargetFunction(bool isMaximize = true, double[] coefficients) {
+        public TargetFunction( double[] coefficients, bool isMaximize = true ) {
             IsMaximize = isMaximize;
             Coefficients = coefficients;
         }

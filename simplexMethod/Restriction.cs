@@ -28,7 +28,7 @@ namespace simplexMethod
                 if(sign == ComparisonSigns.GreaterOrEqual)
                     equalsCount++;
 
-            balanceCoefficients = new double[FreeCoefficients.Length + equalsCount, FreeCoefficients.Length];
+            balanceCoefficients = new double[FreeCoefficients.Length, FreeCoefficients.Length + equalsCount];
             int currentPosition = 0;
             for (int i = 0; i < Signs.Length; i++)
                 switch (Signs[i])

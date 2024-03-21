@@ -11,7 +11,7 @@ namespace simplexMethod
         private readonly TargetFunction startTargetFunction;
         private readonly Restriction startRestrictions;
         private TargetFunction targetFunction;
-        private Dictionary<Crutch, double> vectorBasis;
+        private Basis vectorBasis;
         private double[] vectorB;
         private double[,] A;
         public SimplexSolver(TargetFunction targetFunction, Restriction restrictions) 
@@ -19,8 +19,8 @@ namespace simplexMethod
             startTargetFunction = targetFunction;
             startRestrictions = restrictions;
             this.targetFunction = GetNewTargetFunction();
-            vectorBasis = GetVectorBasis();
             vectorB = startRestrictions.FreeCoefficients;
+            vectorBasis = GetVectorBasis();
             A = GetA();
             Solve();
         }
@@ -51,16 +51,16 @@ namespace simplexMethod
             return new TargetFunction(coefficients : newCoeffs.ToArray());
         }
 
-        private Dictionary<Crutch, double> GetVectorBasis()
+        private Basis GetVectorBasis()
         {
-            var result = new Dictionary<Crutch, double>();
+            var result = new Basis(new int[vectorB.Length], new double[vectorB.Length]);
             for (int i = 0; i < startRestrictions.BalanceCoefficients.GetLength(0); i++)
             {
                 for (int j = 0; j < startRestrictions.BalanceCoefficients.GetLength(1); j++)
                     if (startRestrictions.BalanceCoefficients[i, j] == 1)
                     {
                         var posNumber = startRestrictions.Coefficients.GetLength(1) + j;
-                        result.Add(new Crutch(posNumber), targetFunction.Coefficients[posNumber]);
+                        result.Set(posNumber, targetFunction.Coefficients[posNumber], i);
                         break;
                     }
             }
@@ -69,7 +69,7 @@ namespace simplexMethod
 
         private double[,] GetA()
         {
-            var result = new double[targetFunction.Coefficients.Length, vectorB.Length];
+            var result = new double[vectorB.Length, targetFunction.Coefficients.Length];
             var stRestrLen = startRestrictions.Coefficients.GetLength(1);
             for (int i = 0; i < result.GetLength(0); i++)
             {
@@ -89,7 +89,7 @@ namespace simplexMethod
             var result = new double[targetFunction.Coefficients.Length];
             for (int i = 0; i < result.Length; i++)
             {
-                result[i] = VectorMath.GetScalarProduct(vectorBasis.Values.ToArray(), A.GetColumn(i)) - targetFunction.Coefficients[i];
+                result[i] = VectorMath.GetScalarProduct(vectorBasis.Values, A.GetColumn(i)) - targetFunction.Coefficients[i];
             }
             return result;
         }
@@ -133,16 +133,32 @@ namespace simplexMethod
 
         private void SetNewSimplexIteration(int rowIndex, int colIndex)
         {
-            var newBasisElement = vectorBasis.ElementAt(rowIndex);
-            newBasisElement.Key.Value = colIndex;
-            vectorBasis[colIndex] = targetFunction.Coefficients[colIndex];
+            vectorBasis.Set(colIndex, targetFunction.Coefficients[colIndex], rowIndex);
+
+            for(int i = 0; i < vectorB.Length;i++)
+            {
+                vectorB[i] = i == rowIndex ? vectorB[i] / A[i, colIndex] : vectorB[i] - (vectorB[rowIndex] * A[i, colIndex] / A[rowIndex, colIndex]);
+            }
+
+            for (int i = 0; i < A.GetLength(0); i++)
+            {
+                for (int j = 0; j < A.GetLength(1); j++)
+                {
+                    if (j == colIndex)
+                        A[i, j] = i == rowIndex ? 1.0 : 0.0;
+                    else
+                        A[i, j] = i == rowIndex ?
+                            A[i, j] / (double)A[rowIndex, rowIndex] :
+                            A[i, j] - A[rowIndex, j] * A[i, colIndex] / A[rowIndex, colIndex];
+                }
+            }
         }
 
         private void Solve()
         {
             while (true)
             {
-                var z = VectorMath.GetScalarProduct(vectorBasis.Values.ToArray(), vectorB);
+                var z = VectorMath.GetScalarProduct(vectorBasis.Values, vectorB);
                 var simplexDiffrences = GetSimplexDiffrences();
                 if (IsBreak(simplexDiffrences))
                 {
@@ -152,7 +168,8 @@ namespace simplexMethod
                 var guideColIndex = GetGuideColIndex(simplexDiffrences);
                 var guideRowIndex = GetGuideRowIndex(guideColIndex);
 
-                table = GetNewSimplexTable(table, coefficients, guideRowIndex, guideColIndex);
+                SetNewSimplexIteration(guideRowIndex, guideColIndex);
+                var a = 0;
             }
         }
     }

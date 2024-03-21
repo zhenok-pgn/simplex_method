@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComparisonSigns.cs" />
-    <Compile Include="Crutch .cs" />
+    <Compile Include="Basis.cs" />
     <Compile Include="MatrixExtention.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
